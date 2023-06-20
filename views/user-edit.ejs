@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Form</title>
+	<style>
+		form {
+			margin: 0 auto;
+			width: 300px;
+			padding: 1em;
+			border: 1px solid #CCC;
+			border-radius: 1em;
+		}
+		
+		label {
+			display: inline-block;
+			width: 100px;
+			text-align: right;
+			margin-right: 1em;
+		}
+		
+		input[type="text"],
+		input[type="password"] {
+			padding: 0.5em;
+			margin: 0.5em 0;
+			border-radius: 0.25em;
+			border: 1px solid #CCC;
+		}
+		
+		input[type="submit"] {
+			padding: 0.5em 1em;
+			background-color: #007aff;
+			color: #FFF;
+			border-radius: 0.25em;
+			border: none;
+			font-weight: bold;
+		}
+		
+		input[type="submit"]:hover {
+			background-color: #0060a3;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<form action="/users-edit-do/<%= users.id %>" method="post">
+		<h2>Edit Form</h2>
+		<label for="username">Username:</label>
+		<input type="text" id="username" name="username" value="<%= users.username %>" required><br>
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" required><br>
+		<input type="submit" value="Submit"><br>
+
+	</form>
+</body>
+</html>
